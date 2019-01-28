@@ -7,9 +7,9 @@ This repo provides the theory and methods for the analysis of multivariate data,
 * Principal components
 * Factor analysis
 * Selected new developments in multivariate analysis:  
-    * Independent component analysis
-    * Partial least square regression 
-    * Support vector machine
+   * Independent component analysis
+   * Partial least square regression 
+   * Support vector machine
 
 
 
