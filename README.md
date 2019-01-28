@@ -12,10 +12,9 @@ This repo provides the theory and methods for the analysis of multivariate data,
 
 ### Prerequisites
 
-Installing R project and IDE
+Installing R version 3.5.1
 ```
 https://cloud.r-project.org/
-https://www.rstudio.com/
 ```
 
 ## Links
