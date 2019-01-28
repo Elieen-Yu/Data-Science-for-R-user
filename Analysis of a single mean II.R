@@ -6,7 +6,7 @@ rm(list = ls())  # clear the memory
 
 ## Matched pairs:
 
-X = as.matrix(read.table("T6-1.dat"))
+X = as.matrix(read.table("datasets/T6-1.dat"))
 
 # Columns represent lab 1 (c1, c2) and lab 2(c3, c4)
 diff = cbind(X[,1] - X[,3], X[,2] - X[,4])
@@ -83,7 +83,7 @@ extremes_of_ellipsoid
 ## Repeated measures:
 
 
-X = as.matrix(read.table("T6-2.dat",header=F))	
+X = as.matrix(read.table("datasets/T6-2.dat",header=F))	
 C = rbind(c(-1, -1, 1, 1), c(1, -1, 1, -1), c(1, -1, -1, 1))
 Y = X%*%t(C)
 

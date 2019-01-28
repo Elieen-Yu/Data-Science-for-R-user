@@ -130,7 +130,3 @@ pval.approx = pchisq(chisqd.calc, p, lower.tail = 0)
 
 pval
 pval.approx
-
-
-
-
