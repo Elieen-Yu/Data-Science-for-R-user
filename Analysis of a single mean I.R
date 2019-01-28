@@ -12,6 +12,29 @@ S = cov(X)
 S
 
 ########################################
+# Test marginal normality.
+
+par(mfrow = c(2,2))  # A 2 by 2 panel of plots
+for(i in 1:3) {
+  y = X[,i]
+  v=qqnorm(y, ylab = colnames(X)[i])
+  text(0, .9*max(v$y), paste("p = ", round(shapiro.test(y)[[2]],3)))
+  qqline(y)
+}
+
+# Trivariate normality:
+dsqd = vector(length = n)
+qsqd = vector(length = n)
+for(i in 1:n) {
+  dsqd[i] = t(X[i,] - xbar)%*%solve(S,(X[i,] - xbar))
+  qsqd[i] = qchisq((i-.5)/n, p, lower.tail = T)
+}
+dsqd = sort(dsqd)
+qqplot(qsqd, dsqd, main = "Chisquare Q-Q Plot", xlab = "Chisquare quantiles", ylab = "sample quantiles")
+abline(0,1)
+text(6, max(qsqd-2), paste("corr = ", round(cor(qsqd,dsqd),3)))
+
+########################################
 # Bonferroni intervals on the three marginal means; 95%
 alpha = .05
 m = 3
